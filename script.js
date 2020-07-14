@@ -126,22 +126,22 @@ async function submit_message() {
 
 
 async function delete_message() {
-    console.debug('Nom dans delete_message :');
-    console.debug(path + name_im);
+    //console.debug('Nom dans delete_message :');
+    //console.debug(path + name_im);
     var result = await getUserAsync(path + name_im);
-    console.debug(result);
+    //console.debug(result);
 
     allWords = result["words"];
     //console.debug('Tous les mots :');
-    console.debug(allWords);
+    //console.debug(allWords);
     var selectedWords = [];
 
     for (var value of allWords) {
         var button = document.getElementById(value);
-        alert(button.checked);
+        //alert(button.checked);
         if (button.checked) {
             selectedWords.push(button.value)
-            alert('oui :' + button.value);
+            //alert('oui :' + button.value);
         }
     }
     alert(selectedWords);
@@ -150,6 +150,8 @@ async function delete_message() {
         name: name_im,
         selwords: selectedWords,
     };
+    
+    alert(selectedWords);
 
     fetch(fetch_path + 'delete', {
         method: "POST",
