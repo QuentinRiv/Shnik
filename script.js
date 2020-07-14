@@ -48,7 +48,7 @@ async function prepareWords(path) {
         $('#container').append(`</tr>`)
     }
     $('#container').append(`</table>`)
-    $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
+    //$('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
 
     
