@@ -129,6 +129,7 @@ async function delete_message() {
     console.debug('Nom dans delete_message :');
     console.debug(path + name_im);
     var result = await getUserAsync(path + name_im);
+    consol.debug(result);
 
     allWords = result["words"];
     //console.debug('Tous les mots :');
