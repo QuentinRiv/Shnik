@@ -8,7 +8,7 @@ var fetch_path = "";
 var path_display = "";
 
 
-local = true
+local = false
 if (local) {
     path = `test/` + id;
     path_display = 'display/' + id;
