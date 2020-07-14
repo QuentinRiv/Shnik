@@ -7,6 +7,7 @@ var fetch_path = "";
 // id = Math.floor(Math.random() * 5).toString();
 var path_display = "";
 
+console.debug("********");
 
 local = false
 if (local) {
