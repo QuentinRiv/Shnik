@@ -1,11 +1,11 @@
-
-
 id = '2'
 
 var path = "";
 var fetch_path = "";
 // id = Math.floor(Math.random() * 5).toString();
 var path_display = "";
+
+var name_im = task.info.word;
 
 console.debug("********");
 
@@ -79,6 +79,7 @@ $(document).on("click", ".flag", function () {
 
 // Pour quand on confirme les choix de mots sélectionnés
 async function submit_message() {
+    console.debug('-Nom image :' + name_im);
     console.debug("In Submit");
     var result = await getUserAsync(path);
     allWords = result["words"];
