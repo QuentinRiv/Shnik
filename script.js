@@ -77,8 +77,9 @@ $(document).on("click", ".flag", function () {
 
 // Pour quand on confirme les choix de mots sélectionnés
 async function submit_message() {
-    console.debug('-Nom image :' + name_im);
+    
     console.debug("In Submit");
+    console.debug(path + name_im);
     var result = await getUserAsync(path + name_im);
     allWords = result["words"];
     var selectedWords = [];
