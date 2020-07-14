@@ -9,13 +9,13 @@ console.debug("********");
 
 local = true
 if (local) {
-    path = `test/` + id;
-    path_display = 'display/' + id;
+    path = `test/`;
+    path_display = 'display/';
     fetch_path = `${window.origin}` + '/';
 }
 else {
-    path = `https://retry-unige.herokuapp.com/test/` + id;
-    path_display = `https://retry-unige.herokuapp.com/display/` + id;
+    path = `https://retry-unige.herokuapp.com/test/`;
+    path_display = `https://retry-unige.herokuapp.com/display/`;
     fetch_path = `https://retry-unige.herokuapp.com/`;
 }
 
@@ -79,7 +79,7 @@ $(document).on("click", ".flag", function () {
 async function submit_message() {
     console.debug('-Nom image :' + name_im);
     console.debug("In Submit");
-    var result = await getUserAsync(path);
+    var result = await getUserAsync(path + name_im);
     allWords = result["words"];
     var selectedWords = [];
     for (var value of allWords) {
@@ -91,7 +91,7 @@ async function submit_message() {
     var textfield = document.getElementById("autre_valeur");
 
     var entry = {
-        path: $('#word')[0].src,
+        name: name_im,
         selwords: selectedWords,
         flagwords: flaggedWords,
         newwords : textfield.value
@@ -124,7 +124,7 @@ async function submit_message() {
 
 
 async function delete_message() {
-    var result = await getUserAsync(path);
+    var result = await getUserAsync(path + name_im);
 
     allWords = result["words"];
     var selectedWords = [];
@@ -137,7 +137,7 @@ async function delete_message() {
     }
 
     var entry = {
-        path: $('#word')[0].src,
+        name: name_im,
         selwords: selectedWords,
     };
 
