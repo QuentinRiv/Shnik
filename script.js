@@ -168,8 +168,3 @@ async function delete_message() {
 }
 
 
-$(function () {
-    $('.demo_fluid a').fluidbox();
-});
-
-
