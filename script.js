@@ -79,6 +79,7 @@ $(document).on("click", ".flag", function () {
 async function submit_message() {
     
     console.debug("In Submit");
+    console.debug('Nom dans submit_message :');
     console.debug(path + name_im);
     var result = await getUserAsync(path + name_im);
     allWords = result["words"];
