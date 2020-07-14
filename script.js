@@ -128,7 +128,7 @@ async function submit_message() {
 async function delete_message() {
     console.debug('Nom dans delete_message :');
     console.debug(path + name_im);
-    var result = await getUserAsync(path + name_im);
+    //var result = await getUserAsync(path + name_im);
 
     //allWords = result["words"];
     var selectedWords = [];
@@ -137,8 +137,10 @@ async function delete_message() {
         var button = document.getElementById(value);
         if (button.checked) {
             selectedWords.push(button.value)
+            alert('oui :' + button.value);
         }
     }
+    alert(selectedWords);
 
     var entry = {
         name: name_im,
