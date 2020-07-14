@@ -5,8 +5,6 @@ var fetch_path = "";
 // id = Math.floor(Math.random() * 5).toString();
 var path_display = "";
 
-console.debug("********");
-
 local = false
 if (local) {
     path = `test/`;
@@ -53,7 +51,6 @@ async function prepareWords(path) {
     $('#container').append(`</table>`)
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
-    console.debug(fin["path"]);
 
     
 
@@ -77,10 +74,6 @@ $(document).on("click", ".flag", function () {
 
 // Pour quand on confirme les choix de mots sélectionnés
 async function submit_message() {
-    
-    console.debug("In Submit");
-    console.debug('Nom dans submit_message :');
-    console.debug(path + name_im);
     var result = await getUserAsync(path + name_im);
     allWords = result["words"];
     var selectedWords = [];
@@ -126,32 +119,23 @@ async function submit_message() {
 
 
 async function delete_message() {
-    //console.debug('Nom dans delete_message :');
-    //console.debug(path + name_im);
     var result = await getUserAsync(path + name_im);
-    //console.debug(result);
 
     allWords = result["words"];
-    //console.debug('Tous les mots :');
-    //console.debug(allWords);
     var selectedWords = [];
 
     for (var value of allWords) {
         var button = document.getElementById(value);
-        //alert(button.checked);
         if (button.checked) {
             selectedWords.push(button.value)
-            //alert('oui :' + button.value);
         }
     }
-    alert(selectedWords);
 
     var entry = {
         name: name_im,
         selwords: selectedWords,
     };
     
-    alert(selectedWords);
 
     fetch(fetch_path + 'delete', {
         method: "POST",
