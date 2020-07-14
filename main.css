@@ -101,8 +101,8 @@ fieldset {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  max-width: 600px;
+/*   width: 50%;
+  max-width: 600px; */
 }
 
 .demo_fluid a[data-fluidbox]{
