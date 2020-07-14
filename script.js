@@ -7,7 +7,7 @@ var path_display = "";
 
 console.debug("********");
 
-local = true
+local = false
 if (local) {
     path = `test/`;
     path_display = 'display/';
