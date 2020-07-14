@@ -126,7 +126,7 @@ async function submit_message() {
 
 
 async function delete_message() {
-    console.debug('Nom dans submit_message :');
+    console.debug('Nom dans delete_message :');
     console.debug(path + name_im);
     var result = await getUserAsync(path + name_im);
 
