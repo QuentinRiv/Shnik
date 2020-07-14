@@ -5,7 +5,7 @@ var fetch_path = "";
 // id = Math.floor(Math.random() * 5).toString();
 var path_display = "";
 
-var name_im = task.info.word;
+//var name_im = task.info.word;
 
 console.debug("********");
 
