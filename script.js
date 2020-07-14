@@ -9,7 +9,7 @@ var path_display = "";
 
 console.debug("********");
 
-local = false
+local = true
 if (local) {
     path = `test/` + id;
     path_display = 'display/' + id;
