@@ -131,10 +131,12 @@ async function delete_message() {
     //var result = await getUserAsync(path + name_im);
 
     //allWords = result["words"];
+    alert(allWords);
     var selectedWords = [];
 
     for (var value of allWords) {
         var button = document.getElementById(value);
+        alert(button.checked);
         if (button.checked) {
             selectedWords.push(button.value)
             alert('oui :' + button.value);
