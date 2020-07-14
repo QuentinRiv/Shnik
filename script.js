@@ -54,9 +54,9 @@ async function prepareWords(path) {
     $('#container').append(`</table>`)
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
+    console.debug(fin["path"]);
 
-    $('#ima').attr("src", fin["path"]);
-    $('#a_ima').attr("href", fin["path"]);
+    
 
     return fin
 }
