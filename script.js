@@ -1,4 +1,3 @@
-id = '2'
 
 var path = "";
 var fetch_path = "";
