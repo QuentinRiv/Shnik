@@ -67,7 +67,7 @@ async function prepareWords(path) {
 
 
 
-prepareWords(path);
+// prepareWords(path);
 
 
 
