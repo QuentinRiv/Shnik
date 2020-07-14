@@ -92,7 +92,7 @@ async function submit_message() {
     var textfield = document.getElementById("autre_valeur");
 
     var entry = {
-        id: id,
+        name: window.location.pathname,
         selwords: selectedWords,
         flagwords: flaggedWords,
         newwords : textfield.value
@@ -138,7 +138,7 @@ async function delete_message() {
     }
 
     var entry = {
-        id: id,
+        name: window.location.pathname,
         selwords: selectedWords,
     };
 
