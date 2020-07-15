@@ -40,7 +40,7 @@ async function prepareWords(path) {
     var allWords = fin['words'];
     console.debug('all words :');
     console.debug(allWords);
-    $('#div_tab').append(`<table class="thetab">`)
+    $('#div_tab').append(`<table class="thetab" style="margin: 0 auto; border:1px solid;text-align:center">`)
     for (var value of allWords) {
         $('#div_tab').append(`<tr>`)
         $('#div_tab').append(`<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`)    // Rajoute checkbox
