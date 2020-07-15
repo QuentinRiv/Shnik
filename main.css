@@ -47,10 +47,10 @@ td {
 }
 
 .tab{
-    
+    display: block;
     margin-left:auto;
     margin-right:auto;
-    width:100px;
+    width:500px;
 }
 
 .demo_fluid a[data-fluidbox]{
