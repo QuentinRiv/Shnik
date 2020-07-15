@@ -20,20 +20,6 @@ td {
 }
 
 
-.btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-
 .imElem {
   display: block;
   margin-left: auto;
@@ -47,9 +33,8 @@ td {
 }
 
 .tab{
-    margin-left:auto;
-    margin-right:auto;
-    width:500px;
+    margin: 0 auto;
+    width: 100px; 
 }
 
 .demo_fluid a[data-fluidbox]{
@@ -122,101 +107,5 @@ table {
 }
 
 
-th {
-    height: 30px; /* Controle la hauteure*/
-}
 
-tr {
-    text-align: center;
-    align-content: center;
-    align-self: center;
-}
-
-td {
-    text-align: center;
-    padding: 5px;
-}
-
-.form {
-    margin-top: 20px;
-}
-
-#content {
-    width: 70%;
-}
-
-h1 {
-    text-align: center;
-}
-
-/* p, form {
-    text-align: center;
-} */
-
-.btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-fieldset.content {
-    align-content: center;
-    text-align: center;
-    align-items: center;
-}
-
-.align-center {
-    display: block;
-    margin: 1.0em auto;
-    text-align: center;
-}
-
-fieldset {
-    align-content: center;
-    text-align: center;
-    display: block;
-    width: 200px;
-    /* margin: 0px auto; */
-    margin-left: auto;
-    margin-right: auto;
-    border-radius:8px;
-    /* -webkit-border-radius:8px;
-    -moz-border-radius:8px; */
-    border:2px solid rgb(28, 6, 126);
-}
-
-
-.word_im {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-/*   width: 50%;
-  max-width: 600px; */
-}
-
-.demo_fluid a[data-fluidbox]{
-    border: 3px solid green;
-    box-shadow: 0 0 5px hsla(0,0%,0%,.25);
-    cursor: zoom-in
-	}
-
-.demo_fluid a.fluidbox-opened{
-	cursor:zoom-out
-	}
-
-.demo_fluid a img {
-	display: block;
-	margin: auto;
-    /* max-width: 30%; */
-    max-width: 500px;
-    /* transition: .25s ease-in-out */
-    border: 3px solid black;
-	}
 
