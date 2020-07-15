@@ -33,9 +33,13 @@ td {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  text-align: center;
+  
 }
 
+
+.all_buttons{
+    text-align: center;
+}
 
 .imElem {
   display: block;
