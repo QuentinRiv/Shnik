@@ -41,18 +41,23 @@ async function prepareWords(path) {
     console.debug('all words :');
     console.debug(allWords);
     //$('#div_tab').append(`<table class="thetab" style="margin: 0 auto; border:1px solid;text-align:center">`)
-    $('#div_tab').append(`<tbody>`);
+    var full_tab = ``;
     for (var value of allWords) {
 //         console.debug('avant tr');
 //         $('#div_tab').append(`<tr>`);
 //         $('#div_tab').append(`<td><td>salut</td>`);
         
-        $('#div_tab').append(`<tr><td><input type="checkbox" id="${value}" name="interest" value="${value}"></td></tr>`)    // Rajoute checkbox
+        //$('#div_tab').append(`<tr><td><input type="checkbox" id="${value}" name="interest" value="${value}"></td></tr>`)    // Rajoute checkbox
         //$('#div_tab').append(`<th><label for="${value}">${value}</label></th>`)                              // Associe le nom
         //$('#div_tab').append(`<th><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></th>`) // Met le bouton principal
 //         $('#div_tab').append(`</tr>`)
+        full_tab += `<tr>`;
+        full_tab += `<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`;
+        full_tab += `<td><label for="${value}">${value}</label></td>`;
+        full_tab += `<td><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></td>`;
+        full_tab += `</tr>`;
     }
-    $('#div_tab').append(`</tbody>`);
+    $('#div_tab').append(full_tab);
     //$('#div_tab').append(`</table>`)
     console.debug('Modif 3');
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
