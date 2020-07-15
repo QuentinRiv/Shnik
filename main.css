@@ -2,8 +2,6 @@
 /* Basic rules */
 
 
-
-
 th {
     height: 30px; /* Controle la hauteure*/
 }
@@ -42,36 +40,6 @@ td {
   max-width: 600px;
 }
 
-.container{
-    text-align: center;
-}
-
-.tab{
-    
-    margin-left:auto;
-    margin-right:auto;
-    width:100px;
-}
-
-.demo_fluid a[data-fluidbox]{
-    border: 3px solid green;
-    box-shadow: 0 0 5px hsla(0,0%,0%,.25);
-    cursor: zoom-in
-	}
-
-.demo_fluid a.fluidbox-opened{
-	cursor:zoom-out
-	}
-
-.demo_fluid a img {
-	display: block;
-	margin: auto;
-    /* max-width: 30%; */
-    max-width: 500px;
-    /* transition: .25s ease-in-out */
-    border: 3px solid black;
-	}
-
 
 .input_text {
     text-align: center;
@@ -91,9 +59,4 @@ td {
     margin-right: auto;
 }
 
-.container_div {
-    margin: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+
