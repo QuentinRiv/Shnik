@@ -40,15 +40,15 @@ async function prepareWords(path) {
     var allWords = fin['words'];
     console.debug('all words :');
     console.debug(allWords);
-    $('#tab').append(`<table>`)
+    $('#div_tab').append(`<table>`)
     for (var value of allWords) {
-        $('#tab').append(`<tr>`)
-        $('#tab').append(`<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`)    // Rajoute checkbox
-        $('#tab').append(`<td><label for="${value}">${value}</label></td>`)                              // Associe le nom
-        $('#tab').append(`<td><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></td>`) // Met le bouton principal
-        $('#tab').append(`</tr>`)
+        $('#div_tab').append(`<tr>`)
+        $('#div_tab').append(`<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`)    // Rajoute checkbox
+        $('#div_tab').append(`<td><label for="${value}">${value}</label></td>`)                              // Associe le nom
+        $('#div_tab').append(`<td><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></td>`) // Met le bouton principal
+        $('#div_tab').append(`</tr>`)
     }
-    $('#tab').append(`</table>`)
+    $('#div_tab').append(`</table>`)
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
     console.debug(fin["path"]);
