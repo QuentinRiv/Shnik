@@ -59,11 +59,10 @@ td {
     margin-right: auto;
 }
 
-.div_tab {
-    text-align: center;
-    width:100%;
-    height:100%;
-  }
-table {
-margin: auto; /* or margin: 0 auto 0 auto */
+.div_table{
+    margin-left: auto;
+  margin-right: auto;
+  width: 300px; /* largeur obligatoire pour être centré */
 }
+table {
+    margin: 0
