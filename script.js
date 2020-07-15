@@ -38,6 +38,8 @@ async function getUserAsync(path) {
 async function prepareWords(path) {
     var fin = await getUserAsync(path);
     var allWords = fin['words'];
+    console.debug('all words :');
+    console.debug(allWords);
     $('#tab').append(`<table>`)
     for (var value of allWords) {
         $('#tab').append(`<tr>`)
