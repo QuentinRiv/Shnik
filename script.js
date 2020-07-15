@@ -42,6 +42,7 @@ async function prepareWords(path) {
     console.debug(allWords);
     //$('#div_tab').append(`<table class="thetab" style="margin: 0 auto; border:1px solid;text-align:center">`)
     var full_tab = ``;
+    $('#div_tab').empty();
     for (var value of allWords) {
 //         console.debug('avant tr');
 //         $('#div_tab').append(`<tr>`);
