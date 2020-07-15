@@ -38,20 +38,18 @@ async function getUserAsync(path) {
 async function prepareWords(path) {
     var fin = await getUserAsync(path);
     var allWords = fin['words'];
-    $('#container').append(`<table>`)
     for (var value of allWords) {
-        $('#container').append(`<tr>`)
-        $('#container').append(`<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`)    // Rajoute checkbox
-        $('#container').append(`<td><label for="${value}">${value}</label></td>`)                              // Associe le nom
-        $('#container').append(`<td><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></td>`) // Met le bouton principal
-        // $('#container').append(`<br>`);
-        $('#container').append(`</tr>`)
+        $('#tab').append(`<tr>`)
+        $('#tab').append(`<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`)    // Rajoute checkbox
+        $('#tab').append(`<td><label for="${value}">${value}</label></td>`)                              // Associe le nom
+        $('#tab').append(`<td><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></td>`) // Met le bouton principal
+        $('#tab').append(`</tr>`)
     }
-    $('#container').append(`</table>`)
-    //$('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
+    $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
+    console.debug(fin["path"]);
 
-    
+
 
     return fin
 }
