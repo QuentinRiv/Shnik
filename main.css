@@ -20,6 +20,13 @@ td {
 }
 */
 
+#test {
+    width:100%;
+    height:100%;
+  }
+  table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+  }
 
 .imElem {
   display: block;
