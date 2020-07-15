@@ -54,7 +54,7 @@ async function prepareWords(path) {
     }
     $('#div_tab').append(`</tbody>`);
     //$('#div_tab').append(`</table>`)
-    console.debug('Modif 2');
+    console.debug('Modif 3');
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
     console.debug(fin["path"]);
