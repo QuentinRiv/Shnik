@@ -1,15 +1,7 @@
 
 /* Basic rules */
 
-body, html {
-    margin: 0;
-    font-family: sans-serif;
-}
 
-.content {
-    margin: 0 auto;
-    width: 400px; /*taille du tableau*/
-}
 
 
 th {
@@ -27,21 +19,6 @@ td {
     padding: 5px;
 }
 
-.form {
-    margin-top: 20px;
-}
-
-/* #content {
-    width: 70%;
-} */
-
-h1 {
-    text-align: center;
-}
-
-/* p, form {
-    text-align: center;
-} */
 
 .btn {
   background-color: #4CAF50;
@@ -54,32 +31,6 @@ h1 {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-
-fieldset.content {
-    align-content: center;
-    text-align: center;
-    align-items: center;
-}
-
-.align-center {
-    display: block;
-    margin: 1.0em auto;
-    text-align: center;
-}
-
-fieldset {
-    align-content: center;
-    text-align: center;
-    display: block;
-    width: 200px;
-    /* margin: 0px auto; */
-    margin-left: auto;
-    margin-right: auto;
-    border-radius:8px;
-    /* -webkit-border-radius:8px;
-    -moz-border-radius:8px; */
-    border:2px solid rgb(28, 6, 126);
 }
 
 
@@ -96,7 +47,7 @@ fieldset {
 }
 
 .tab{
-    text-align: center;
+    
     margin-left:auto;
     margin-right:auto;
     width:100px;
