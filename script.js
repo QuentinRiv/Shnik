@@ -42,15 +42,16 @@ async function prepareWords(path) {
     console.debug(allWords);
     //$('#div_tab').append(`<table class="thetab" style="margin: 0 auto; border:1px solid;text-align:center">`)
     for (var value of allWords) {
-        console.debug('avant tr')
-        $('#div_tab').append(`<tr>`)
-        console.debug('après tr')
+        console.debug('avant tr');
+        $('#div_tab').append(`<tr>`);
+        console.debug('après tr');
         $('#div_tab').append(`<th><input type="checkbox" id="${value}" name="interest" value="${value}"></th>`)    // Rajoute checkbox
         $('#div_tab').append(`<th><label for="${value}">${value}</label></th>`)                              // Associe le nom
         $('#div_tab').append(`<th><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></th>`) // Met le bouton principal
         $('#div_tab').append(`</tr>`)
     }
     //$('#div_tab').append(`</table>`)
+    console.debug('Fin tableau');
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
     console.debug(fin["path"]);
