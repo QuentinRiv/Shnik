@@ -38,6 +38,7 @@ async function getUserAsync(path) {
 async function prepareWords(path) {
     var fin = await getUserAsync(path);
     var allWords = fin['words'];
+    $('#tab').append(`<table>`)
     for (var value of allWords) {
         $('#tab').append(`<tr>`)
         $('#tab').append(`<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`)    // Rajoute checkbox
@@ -45,6 +46,7 @@ async function prepareWords(path) {
         $('#tab').append(`<td><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></td>`) // Met le bouton principal
         $('#tab').append(`</tr>`)
     }
+    $('#tab').append(`</table>`)
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
     console.debug(fin["path"]);
