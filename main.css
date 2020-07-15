@@ -12,6 +12,10 @@ tr {
     align-self: center;
 }
 
+h1 {
+    text-align: center;
+}
+
 td {
     text-align: center;
     padding: 5px;
@@ -59,10 +63,4 @@ td {
     margin-right: auto;
 }
 
-.div_table{
-    margin-left: auto;
-  margin-right: auto;
-  width: 300px; /* largeur obligatoire pour être centré */
-}
-table {
-    margin: 0
+
