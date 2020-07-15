@@ -20,13 +20,14 @@ td {
 }
 */
 
-#test {
+.test {
     width:100%;
     height:100%;
   }
-  table {
+
+table {
     margin: 0 auto; /* or margin: 0 auto 0 auto */
-  }
+}
 
 .imElem {
   display: block;
@@ -36,11 +37,11 @@ td {
   max-width: 600px;
 }
 
-
+/*
 .tab{
     margin: 0 auto;
     width: 100px; 
-}
+}*/
 
 
 .input_text {
