@@ -44,12 +44,12 @@ async function prepareWords(path) {
     $('#div_tab').append(`<tbody>`);
     for (var value of allWords) {
         console.debug('avant tr');
-        $('#div_tab').append(`<tr>`);
+        $('#div_tab').append(`<tr><td>salut</td></tr>`);
         console.debug('après tr');
-        $('#div_tab').append(`<th><input type="checkbox" id="${value}" name="interest" value="${value}"></th>`)    // Rajoute checkbox
-        $('#div_tab').append(`<th><label for="${value}">${value}</label></th>`)                              // Associe le nom
-        $('#div_tab').append(`<th><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></th>`) // Met le bouton principal
-        $('#div_tab').append(`</tr>`)
+        //$('#div_tab').append(`<th><input type="checkbox" id="${value}" name="interest" value="${value}"></th>`)    // Rajoute checkbox
+        //$('#div_tab').append(`<th><label for="${value}">${value}</label></th>`)                              // Associe le nom
+        //$('#div_tab').append(`<th><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></th>`) // Met le bouton principal
+        //$('#div_tab').append(`</tr>`)
     }
     $('#div_tab').append(`</tbody>`);
     //$('#div_tab').append(`</table>`)
