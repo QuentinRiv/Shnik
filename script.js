@@ -80,6 +80,7 @@ async function show_ip() {
     console.debug(ipdata['ip_add']);
     console.debug('http_addr');
     console.debug(ipdata['http_addr']);
+    console.debug(ipdata);
 }
 
 show_ip();
