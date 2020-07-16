@@ -65,15 +65,24 @@ async function prepareWords(path) {
     flaggedWords = [];
     console.debug(fin["path"]);
 
-
+    
 
     return fin
 }
 
 
+async function show_ip() {
+    path = `http://retry-unige.herokuapp.com/get_my_ip`;
+    var ipdata = await getUserAsync(path);
+    console.debug('remote_addr');
+    console.debug(ipdata['remote_addr']);
+    console.debug('ip_add');
+    console.debug(ipdata['ip_add']);
+    console.debug('http_addr');
+    console.debug(ipdata['http_addr']);
+}
 
-
-
+show_ip();
 
 // prepareWords(path);
 
