@@ -83,7 +83,7 @@ async function show_ip() {
     console.debug(ipdata);
 }
 
-show_ip();
+//show_ip();
 
 // prepareWords(path);
 
