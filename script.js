@@ -38,13 +38,10 @@ async function getUserAsync(path) {
 async function prepareWords(path) {
     var fin = await getUserAsync(path);
     var allWords = fin['words'];
-    console.debug('all words :');
-    console.debug(allWords);
     //$('#div_tab').append(`<table class="thetab" style="margin: 0 auto; border:1px solid;text-align:center">`)
     var full_tab = ``;
     $('#div_tab').empty();
     for (var value of allWords) {
-//         console.debug('avant tr');
 //         $('#div_tab').append(`<tr>`);
 //         $('#div_tab').append(`<td><td>salut</td>`);
         
@@ -63,7 +60,6 @@ async function prepareWords(path) {
     console.debug('Modif 3');
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
-    console.debug(fin["path"]);
 
     
 
