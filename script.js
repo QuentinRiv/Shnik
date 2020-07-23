@@ -61,7 +61,7 @@ async function prepareWords(path) {
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
 
-    
+    console.debug(getUserAsync(`http://retry-unige.herokuapp.com/get_my_ip`));
 
     return fin
 }
