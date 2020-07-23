@@ -68,7 +68,7 @@ async function prepareWords(path) {
 
 
 async function show_ip() {
-    path = `http://retry-unige.herokuapp.com/get_my_ip`;
+    path = `http://retry-unige.herokuapp.com/tester`;
     var ipdata = await getUserAsync(path);
     console.debug(ipdata);
 }
