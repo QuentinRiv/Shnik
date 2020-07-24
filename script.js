@@ -11,7 +11,7 @@ if (local) {
     fetch_path = `${window.origin}` + '/';
 }
 else {
-    path = `https://retry-unige.herokuapp.com/test/`;
+    path = `https://retry-unige.herokuapp.com/image/`;
     path_display = `https://retry-unige.herokuapp.com/display/`;
     fetch_path = `https://retry-unige.herokuapp.com/`;
 }
