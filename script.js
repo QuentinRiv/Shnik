@@ -128,6 +128,7 @@ async function submit_message() {
             console.log("Fetch error: " + error);
         });
 
+    return entry
 }
 
 
