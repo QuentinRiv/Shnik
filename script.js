@@ -1,20 +1,9 @@
 
-var path = "";
-var fetch_path = "";
-// id = Math.floor(Math.random() * 5).toString();
-var path_display = "";
 
-local = false
-if (local) {
-    path = `test/`;
-    path_display = 'display/';
-    fetch_path = `${window.origin}` + '/';
-}
-else {
-    path = `https://retry-unige.herokuapp.com/image/`;
-    path_display = `https://retry-unige.herokuapp.com/display/`;
-    fetch_path = `https://retry-unige.herokuapp.com/`;
-}
+var path = `https://retry-unige.herokuapp.com/image/`;
+var path_display = `https://retry-unige.herokuapp.com/display/`;
+var fetch_path = `https://retry-unige.herokuapp.com/`;
+
 
 var allWords = [];
 
@@ -37,7 +26,7 @@ async function getUserAsync(path) {
 
 async function prepareWords(path) {
     var fin = await getUserAsync(path);
-    var allWords = fin['words'];
+    allWords = fin['words'];
     //$('#div_tab').append(`<table class="thetab" style="margin: 0 auto; border:1px solid;text-align:center">`)
     var full_tab = ``;
     $('#div_tab').empty();
@@ -87,8 +76,8 @@ $(document).on("click", ".flag", function () {
 
 // Pour quand on confirme les choix de mots sélectionnés
 async function submit_message() {
-    var result = await getUserAsync(path + name_im);
-    allWords = result["words"];
+    //var result = await getUserAsync(path + name_im);
+    //allWords = result["words"];
     var selectedWords = [];
     for (var value of allWords) {
         var button = document.getElementById(value);
