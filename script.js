@@ -75,7 +75,7 @@ $(document).on("click", ".flag", function () {
 
 
 // Pour quand on confirme les choix de mots sélectionnés
-async function submit_message() {
+function submit_message() {
     //var result = await getUserAsync(path + name_im);
     //allWords = result["words"];
     var selectedWords = [];
@@ -121,10 +121,7 @@ async function submit_message() {
 }
 
 
-async function delete_message() {
-    var result = await getUserAsync(path + name_im);
-
-    allWords = result["words"];
+function delete_message() {
     var selectedWords = [];
 
     for (var value of allWords) {
