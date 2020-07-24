@@ -31,13 +31,6 @@ async function prepareWords(path) {
     var full_tab = ``;
     $('#div_tab').empty();
     for (var value of allWords) {
-//         $('#div_tab').append(`<tr>`);
-//         $('#div_tab').append(`<td><td>salut</td>`);
-        
-        //$('#div_tab').append(`<tr><td><input type="checkbox" id="${value}" name="interest" value="${value}"></td></tr>`)    // Rajoute checkbox
-        //$('#div_tab').append(`<th><label for="${value}">${value}</label></th>`)                              // Associe le nom
-        //$('#div_tab').append(`<th><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></th>`) // Met le bouton principal
-//         $('#div_tab').append(`</tr>`)
         full_tab += `<tr>`;
         full_tab += `<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`;
         full_tab += `<td><label for="${value}">${value}</label></td>`;
@@ -45,12 +38,9 @@ async function prepareWords(path) {
         full_tab += `</tr>`;
     }
     $('#div_tab').append(full_tab);
-    //$('#div_tab').append(`</table>`)
     console.debug('Modif 3');
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
-
-    //console.debug(getUserAsync(`http://retry-unige.herokuapp.com/get_my_ip`));
 
     return fin
 }
@@ -62,10 +52,6 @@ async function show_ip() {
     console.debug(ipdata);
 }
 
-// show_ip();
-
-// prepareWords(path);
-
 
 
 // Fonction qui, quand on appuie sur le drapeau, rajoute le mot flaggé dans une liste
@@ -76,8 +62,6 @@ $(document).on("click", ".flag", function () {
 
 // Pour quand on confirme les choix de mots sélectionnés
 function submit_message() {
-    //var result = await getUserAsync(path + name_im);
-    //allWords = result["words"];
     var selectedWords = [];
     for (var value of allWords) {
         var button = document.getElementById(value);
