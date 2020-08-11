@@ -38,7 +38,7 @@ async function prepareWords(path) {
         full_tab += `</tr>`;
     }
     $('#div_tab').append(full_tab);
-    console.debug('Modif 3');
+
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
     flaggedWords = [];
 
