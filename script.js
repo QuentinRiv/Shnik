@@ -17,9 +17,10 @@ url: "/account/profile",
 contentType: "application/json",
 dataType: "json",
 success: function(data) {
-  email = user.data.email_addr;
-  id = user.data.id;
-  fullname = user.data.name;
+  console.debug(data.user.id);
+  email = data.user.email_addr;
+  id = data.user.id;
+  fullname = data.user.name;
   console.debug('email : ' + email);
   console.debug('fullname : ' + fullname);
 },
