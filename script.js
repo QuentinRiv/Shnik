@@ -147,3 +147,15 @@ function delete_message() {
 }
 
 
+ $.ajax({
+type: "GET",
+url: "/account/profile",
+contentType: "application/json",
+dataType: "json",
+success: function(data) {
+  console.log(data.user);
+},
+error: function (xhr, textStatus, errorThrown) {
+  console.log(xhr.responseText);
+}
+});
