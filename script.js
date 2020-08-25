@@ -7,6 +7,27 @@ var fetch_path = `https://retry-unige.herokuapp.com/`;
 
 var allWords = [];
 
+var email = '';
+var id = '';
+var fullname = '';
+
+ $.ajax({
+type: "GET",
+url: "/account/profile",
+contentType: "application/json",
+dataType: "json",
+success: function(data) {
+  email = user.data.email_addr;
+  id = user.data.id;
+  fullname = user.data.name;
+  console.debug('email : ' + email);
+  console.debug('fullname : ' + fullname);
+},
+error: function (xhr, textStatus, errorThrown) {
+  console.log(xhr.responseText);
+}
+});
+
 async function getUserAsync(path) {
     let response = await fetch(path, {
         // fetch(`https://retry-unige.herokuapp.com/addDB`, {
@@ -147,15 +168,4 @@ function delete_message() {
 }
 
 
- $.ajax({
-type: "GET",
-url: "/account/profile",
-contentType: "application/json",
-dataType: "json",
-success: function(data) {
-  console.log(data.user);
-},
-error: function (xhr, textStatus, errorThrown) {
-  console.log(xhr.responseText);
-}
-});
+
