@@ -1,16 +1,16 @@
 
+// Path of the API
+var path_API = `https://retry-unige.herokuapp.com/`;
 
-var path = `https://retry-unige.herokuapp.com/image/`;
-var path_display = `https://retry-unige.herokuapp.com/display/`;
-var fetch_path = `https://retry-unige.herokuapp.com/`;
-
-
+// Variable often used for fetching data
 var allWords = [];
 
+// Variables for the user infos
 var email = '';
 var id = '';
 var fullname = '';
 
+// Get info about the user (email, id, fullname)
  $.ajax({
 type: "GET",
 url: "/account/profile",
@@ -49,7 +49,6 @@ async function getUserAsync(path) {
 async function prepareWords(path) {
     var fin = await getUserAsync(path);
     allWords = fin['words'];
-    //$('#div_tab').append(`<table class="thetab" style="margin: 0 auto; border:1px solid;text-align:center">`)
     var full_tab = ``;
     $('#div_tab').empty();
     for (var value of allWords) {
@@ -62,28 +61,20 @@ async function prepareWords(path) {
     $('#div_tab').append(full_tab);
 
     $('#imElem').attr("src", fin["path"]);          // Source de l'image a affiché
-    flaggedWords = [];
+    flaggedWords = [];                              // Empty the list, for the newt task
 
     return fin
 }
 
 
-async function show_ip() {
-    path = `http://retry-unige.herokuapp.com/get_my_ip`;
-    var ipdata = await getUserAsync(path);
-    console.debug(ipdata);
-}
-
-
-
-// Fonction qui, quand on appuie sur le drapeau, rajoute le mot flaggé dans une liste
+// Function that, when we click on the flag, add the flagged word into a  list
 $(document).on("click", ".flag", function () {
     flaggedWords.push($(this).attr("value"));
 });
 
 
-// Pour quand on confirme les choix de mots sélectionnés
-function submit_message() {
+// For when we confirm the choices of selected words
+function submit_entry() {
     var selectedWords = [];
     for (var value of allWords) {
         var button = document.getElementById(value);
@@ -102,7 +93,7 @@ function submit_message() {
     };
 
 
-    fetch(fetch_path + 'addDB', {
+    fetch(path_API + 'addDB', {
         method: "POST",
         credentials: "include",
         body: JSON.stringify(entry),
@@ -112,7 +103,7 @@ function submit_message() {
         })
     })
         .then(function (response) {
-            if (response.status !== 200) {
+            if (response.status !== 200) {    // Error handling
                 console.log(`Looks like there was a problem. Status code: ${response.status}`);
                 return;
             }
@@ -124,11 +115,12 @@ function submit_message() {
             console.log("Fetch error: " + error);
         });
 
-    return entry
+    return entry      // If no mistake, we can return
 }
 
 
-function delete_message() {
+// Delete a word from the database
+function delete_word() {
     var selectedWords = [];
 
     for (var value of allWords) {
@@ -142,9 +134,9 @@ function delete_message() {
         name: name_im,
         selwords: selectedWords,
     };
-    
 
-    fetch(fetch_path + 'delete', {
+
+    fetch(path_API + 'delete', {
         method: "POST",
         credentials: "include",
         body: JSON.stringify(entry),
@@ -168,6 +160,3 @@ function delete_message() {
         });
 
 }
-
-
-
