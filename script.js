@@ -97,7 +97,8 @@ function submit_message() {
         name: name_im,
         selwords: selectedWords,
         flagwords: flaggedWords,
-        newwords : textfield.value
+        newwords : textfield.value,
+        user_data : email+id.toString()+fullname
     };
 
 
