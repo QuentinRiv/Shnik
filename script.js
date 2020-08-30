@@ -82,13 +82,17 @@ function submit_entry() {
             selectedWords.push(button.value)
         }
     }
-    var textfield = document.getElementById("autre_valeur");
+    var textfield = document.getElementsByClassName("autre_valeur");
+ 
+    for (i = 0; i < textfield.length; i++) { 
+     console.debug(textfield[i].value;
+    }
 
     var entry = {
         name: name_im,
         selwords: selectedWords,
         flagwords: flaggedWords,
-        newwords : textfield.value,
+        newwords : '',
         user_data : email+','+id.toString()+','+fullname
     };
 
