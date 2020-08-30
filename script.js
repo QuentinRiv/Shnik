@@ -96,7 +96,7 @@ function submit_entry() {
         name: name_im,
         selwords: selectedWords,
         flagwords: flaggedWords,
-        newwords : '',
+        newwords : aNewWords,
         user_data : email+','+id.toString()+','+fullname
     };
 
