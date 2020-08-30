@@ -84,6 +84,8 @@ function submit_entry() {
     }
     var textfield = document.getElementsByClassName("newVal");
  
+    console.debug(textfield.length);
+ 
     for (i = 0; i < textfield.length; i++) { 
      console.debug(textfield[i].value);
     }
