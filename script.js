@@ -83,12 +83,14 @@ function submit_entry() {
         }
     }
     var textfield = document.getElementsByClassName("newVal");
- 
-    console.debug(textfield.length);
+  
+    var aNewWords = [];
  
     for (i = 0; i < textfield.length; i++) { 
-     console.debug(textfield[i].value);
+     aNewWords.push(textfield[i].value);
     }
+ 
+    console.debug(aNewWords);
 
     var entry = {
         name: name_im,
