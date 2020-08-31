@@ -168,3 +168,42 @@ function delete_word() {
         });
 
 }
+
+
+
+var count = 0;
+
+// Add text field
+$("#newRow").on("click", ".addRow", function () {
+   $('.plus').last().removeClass("fa-plus-circle");
+   $('.plus').last().addClass("fa-times-circle");
+
+   $('.changeRow').last().removeClass("btn-info");
+   $('.changeRow').last().addClass("btn-danger");
+   $('.changeRow').last().addClass("deleteRow");
+   $('.changeRow').last().removeClass("addRow");
+
+   count++;
+     var html = '<br id="brs'+count.toString()+'">';
+
+   html += '<input id="field'+count.toString()+'" type="text" class="newVal" , placeholder="other name">';
+     html += '<button id="but_plus'+count.toString()+'" type="button" class="btn-info button1 addRow changeRow"><i class="fa fa-plus-circle plus"></i></button>';
+     $('#newRow').append(html);
+ });
+  
+// Delete text field
+$("#newRow").on("click", ".deleteRow", function () {
+    var numItems = $(this);
+   var id_val = numItems.attr('id');
+   var num = id_val[id_val.length - 1];
+   var class_val = "#field" + num;
+   var br_val = "#brs" + num;
+   //$(class_val).remove();
+   //$(this).remove();
+   $(this).fadeOut( "slow" );
+   $(class_val).fadeOut( "slow" );
+   //$(".brs").last().remove();
+   $(br_val).fadeOut( "slow" );
+
+    console.debug('delete Row ' + class_val);
+});
