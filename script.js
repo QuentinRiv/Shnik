@@ -1,6 +1,6 @@
 
 // Path of the API
-var path_API = `https://retry-unige.herokuapp.com/`;
+var path_API = `https://retry-unige.herokuapp.com/`;  // TO MODIFY
 
 // Variable often used for fetching data
 var allWords = [];
