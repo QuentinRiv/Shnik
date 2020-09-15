@@ -67,7 +67,7 @@ async function prepareWords(path) {
     return fin
 }
 
-$(".checkbox").change(function() {
+$(document).on('change', '.checkbox', function() {
     if(this.checked) {
         console.log('cacse cochée !');
     }
@@ -75,6 +75,7 @@ $(".checkbox").change(function() {
   console.log('case décochée !');
  }
 });
+
 
 
 // Function that, when we click on the flag, add the flagged word into a  list
