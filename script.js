@@ -54,7 +54,7 @@ async function prepareWords(path) {
     $('#div_tab').empty();
     for (var value of allWords) {
         full_tab += `<tr>`;
-        full_tab += `<td><input type="checkbox" id="${value}" name="interest" value="${value}"></td>`;
+        full_tab += `<td><input type="checkbox" class="checkbox" id="${value}" name="interest" value="${value}"></td>`;
         full_tab += `<td><label for="${value}">${value}</label></td>`;
         full_tab += `<td><button class="flag" value="${value}"><i class="fa fa-flag"></i></button></td>`;
         full_tab += `</tr>`;
@@ -66,6 +66,15 @@ async function prepareWords(path) {
 
     return fin
 }
+
+$(".checkbox").change(function() {
+    if(this.checked) {
+        console.log('cacse cochée !');
+    }
+ else {
+  console.log('case décochée !');
+ }
+});
 
 
 // Function that, when we click on the flag, add the flagged word into a  list
