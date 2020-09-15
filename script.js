@@ -70,7 +70,10 @@ async function prepareWords(path) {
 
 // Function that, when we click on the flag, add the flagged word into a  list
 $(document).on("click", ".flag", function () {
-    flaggedWords.push($(this).attr("value"));
+ if (jQuery.inArray('sumit', names_arr) == -1)  // Check if the word is not already flagged
+  {
+   flaggedWords.push($(this).attr("value"));
+  }
 });
 
 
