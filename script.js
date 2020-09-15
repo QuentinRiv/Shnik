@@ -70,16 +70,18 @@ async function prepareWords(path) {
 
 // Function that, when we click on the flag, add the flagged word into a  list
 $(document).on("click", ".flag", function () {
- if (jQuery.inArray($(this).attr("value"), flaggedWords) == -1)  // Check if the word is not already flagged
+ flagged_word = $(this).attr("value");
+ if (jQuery.inArray(flagged_word, flaggedWords) == -1)  // Check if the word is not already flagged
   {
    flaggedWords.push($(this).attr("value"));
    $(this).css("background-color", "red");
   }
  else {
-  flaggedWords.remove($(this).attr("value"));
+  var index = flaggedWords.indexOf(flagged_word);
+  flaggedWords.splice(index, 1);
   $(this).css("background-color", "grey");
  }
- console.debug(flaggedwords);
+ console.debug(flaggedWords);
 });
 
 
