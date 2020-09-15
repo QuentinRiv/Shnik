@@ -68,11 +68,18 @@ async function prepareWords(path) {
 }
 
 $(document).on('change', '.checkbox', function() {
+    flagged_word = $(this).attr("value");
     if(this.checked) {
-        console.log('case cochée :' + $(this).attr("value"));
+        console.log('case cochée :' + flagged_word);
+        if (jQuery.inArray(flagged_word, flaggedWords) != -1)  // Check if the word is not already flagged
+        {
+         var index = flaggedWords.indexOf(flagged_word);
+         flaggedWords.splice(index, 1);
+         $(this).css("background-color", "white");
+        }
     }
     else {
-     console.log('case décochée :' + $(this).attr("value"));
+     console.log('case décochée :' + flagged_word);
     }
 });
 
