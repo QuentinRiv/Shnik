@@ -74,6 +74,7 @@ $(document).on("click", ".flag", function () {
   {
    flaggedWords.push($(this).attr("value"));
   }
+ $(this).css("background-color", "red");
 });
 
 
