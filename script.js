@@ -73,8 +73,11 @@ $(document).on("click", ".flag", function () {
  if (jQuery.inArray($(this).attr("value"), flaggedWords) == -1)  // Check if the word is not already flagged
   {
    flaggedWords.push($(this).attr("value"));
+   $(this).css("background-color", "red");
   }
- $(this).css("background-color", "red");
+ else {
+  flaggedWords.remove($(this).attr("value"));
+  $(this).css("background-color", "grey");
 });
 
 
