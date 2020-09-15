@@ -93,6 +93,7 @@ $(document).on("click", ".flag", function () {
   {
    flaggedWords.push($(this).attr("value"));
    $(this).css("background-color", "red");
+   $("#check_"+flagged_word).prop( "checked", true );
   }
  else {
   var index = flaggedWords.indexOf(flagged_word);
