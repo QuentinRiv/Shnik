@@ -91,7 +91,7 @@ $(document).on("click", ".flag", function () {
   {
    flaggedWords.push($(this).attr("value"));
    $(this).css("background-color", "red");
-   $("#check_"+flagged_word).prop( "checked", true );
+   $("#check_"+flagged_word).prop( "checked", false );
    console.log("#check_"+flagged_word);
   }
  else {
