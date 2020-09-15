@@ -75,7 +75,7 @@ $(document).on('change', '.checkbox', function() {
         {
          var index = flaggedWords.indexOf(flagged_word);
          flaggedWords.splice(index, 1);
-         $(this).css("background-color", "white");
+         $("flag_"+flagged_word).css("background-color", "white");
         }
     }
     else {
