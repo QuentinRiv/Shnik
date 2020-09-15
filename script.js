@@ -70,12 +70,10 @@ async function prepareWords(path) {
 $(document).on('change', '.checkbox', function() {
     flagged_word = $(this).attr("value");
     if(this.checked) {
-        console.log('case cochée :' + flagged_word);
         if (jQuery.inArray(flagged_word, flaggedWords) != -1)  // Check if the word is not already flagged
         {
          var index = flaggedWords.indexOf(flagged_word);
          flaggedWords.splice(index, 1);
-         console.log("flag_"+flagged_word);
          $("#flag_"+flagged_word).css("background-color", "white");
         }
     }
@@ -94,6 +92,7 @@ $(document).on("click", ".flag", function () {
    flaggedWords.push($(this).attr("value"));
    $(this).css("background-color", "red");
    $("#check_"+flagged_word).prop( "checked", true );
+   console.log(#check_"+flagged_word);
   }
  else {
   var index = flaggedWords.indexOf(flagged_word);
