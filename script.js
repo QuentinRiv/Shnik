@@ -79,7 +79,7 @@ $(document).on("click", ".flag", function () {
  else {
   var index = flaggedWords.indexOf(flagged_word);
   flaggedWords.splice(index, 1);
-  $(this).css("background-color", "grey");
+  $(this).css("background-color", "white");
  }
  console.debug(flaggedWords);
 });
