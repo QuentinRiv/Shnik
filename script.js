@@ -69,10 +69,10 @@ async function prepareWords(path) {
 
 $(document).on('change', '.checkbox', function() {
     if(this.checked) {
-        console.log('case cochée :' + this.attr("value"));
+        console.log('case cochée :' + $(this).attr("value"));
     }
     else {
-     console.log('case décochée :' + this.attr("value"));
+     console.log('case décochée :' + $(this).attr("value"));
     }
 });
 
