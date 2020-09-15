@@ -55,8 +55,8 @@ async function prepareWords(path) {
     for (var word of allWords) {
         full_tab += `<tr>`;
         full_tab += `<td><input type="checkbox" class="checkbox" id="check_"+value name="interest" value="${word}"></td>`;
-        full_tab += `<td><label for="${value}">${value}</label></td>`;
-        full_tab += `<td><button class="flag" id="flag_${value}" value="${value}"><i class="fa fa-flag"></i></button></td>`;
+        full_tab += `<td><label for="${word}"> ${word} </label></td>`;
+        full_tab += `<td><button class="flag" id="flag_${word}" value="${word}"><i class="fa fa-flag"></i></button></td>`;
         full_tab += `</tr>`;
     }
     $('#div_tab').append(full_tab);
