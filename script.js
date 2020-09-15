@@ -78,6 +78,8 @@ $(document).on("click", ".flag", function () {
  else {
   flaggedWords.remove($(this).attr("value"));
   $(this).css("background-color", "grey");
+ }
+ console.debug(flaggedwords);
 });
 
 
