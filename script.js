@@ -108,8 +108,11 @@ function submit_entry() {
     var selectedWords = [];
     for (var value of allWords) {
         var button = document.getElementById(value);
-        if (button.checked) {
-            selectedWords.push(button.value)
+        if (button != null)
+        {
+            if (button.checked) {
+                selectedWords.push(button.value)
+            }
         }
     }
     var textfield = document.getElementsByClassName("newVal");
