@@ -1,0 +1,25 @@
+{% extends 'base_welcome.html' %}
+
+{% block head %}
+
+<title>My incredible web site</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><h1 class="display-4">Welcome Page</h1></a>
+</nav>
+
+<p>
+    {{ config.API_path }} <span id='lon'></span>
+</p>
+
+<h1>Database</h1>
+<br>
+
+
+
+{% endblock %}
