@@ -13,7 +13,7 @@ colorama==0.4.3
 cycler==0.10.0
 decorator==4.4.2
 distlib==0.3.0
-Django==3.0.8
+Django==3.2.25
 dlib==19.17.0
 et-xmlfile==1.0.1
 filelock==3.0.12
