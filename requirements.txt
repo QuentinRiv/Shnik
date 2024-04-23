@@ -105,6 +105,6 @@ virtualenv==20.0.25
 virtualenv-clone==0.5.4
 watchdog==0.10.3
 wcwidth==0.2.5
-Werkzeug==1.0.1
+Werkzeug==2.3.8
 wrapt==1.12.1
 zmq==0.0.0
