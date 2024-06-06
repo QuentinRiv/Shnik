@@ -96,7 +96,7 @@ termcolor==1.1.0
 textdistance==4.2.0
 tf-word2vec==1.0.4
 toml==0.10.1
-tornado==6.0.4
+tornado==6.4.1
 tqdm==4.46.0
 traitlets==5.0.4
 tweepy==3.9.0
