@@ -100,7 +100,7 @@ tornado==6.0.4
 tqdm==4.46.0
 traitlets==5.0.4
 tweepy==3.9.0
-urllib3==1.25.9
+urllib3==1.26.19
 virtualenv==20.0.25
 virtualenv-clone==0.5.4
 watchdog==0.10.3
